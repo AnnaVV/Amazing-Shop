@@ -1,0 +1,26 @@
+﻿@model AmazingShop.Models.Category
+
+
+@using (Html.BeginForm("SaveCategory", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.Id)
+
+    @*if (!string.IsNullOrEmpty(Model.Image))
+    {
+        <img alt="Image" src="data:@Model.ImageContentType;base64,@Model.Image" />
+    }*@
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control", placeholder = "Category Name" })      
+    </div>
+    
+    <div class="form-group">
+        <input type="file" id="file" name="file" value="Browse">
+    </div>
+    
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control", placeholder = "Description" })      
+    </div>
+      
+    <input type="submit" value="Save Category" class="btn btn-primary" style="margin-top:10px" />
+}
+

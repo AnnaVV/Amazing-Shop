@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Amazing Shop</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav">
+                    <li class="active">@Html.ActionLink("Categories","Index","Category")</li>
+                    <li>@Html.ActionLink("About", "Index", "About")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><span class="glyphicon glyphicon-shopping-cart" style="margin-top:15px; color:aqua"></span></li>              
+                <li>@Html.ActionLink("Chart", "Index", "Chart")</li>
+                <li ><span class="badge" style="margin-top:15px">4</span></li>
+                </ul>
+</div><!-- /.navbar-collapse -->
+          
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        @RenderBody()   
+    </div>
+    <div class="navbar-fixed-bottom panel-footer text-center ">Amazing Shop © 2014</div>
+    
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
