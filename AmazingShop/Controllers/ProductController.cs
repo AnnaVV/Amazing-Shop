@@ -36,7 +36,7 @@ namespace AmazingShop.Controllers
             model.Category = categories;
             entity.ProductLists.Add(model);
             entity.SaveChanges();
-            return View();
+            return RedirectToAction("AddProduct");
         }
 
     }

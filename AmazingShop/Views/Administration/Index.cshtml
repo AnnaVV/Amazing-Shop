@@ -1,0 +1,11 @@
+﻿@model AmazingShop.Models.Login
+
+@using (@Html.BeginForm("LogIn", "Administration", FormMethod.Post, new { @class = "form-signin" }))
+{
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Name" })
+   
+    @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Password" })
+
+    <input type="submit" value="Log in" class="btn btn-lg btn-primary btn-block" />
+}
+

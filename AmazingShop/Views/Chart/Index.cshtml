@@ -1,5 +1,51 @@
-﻿@{
+﻿@model IEnumerable<AmazingShop.Models.ProductList>
+
+@{
     ViewBag.Title = "Index";
+
+    HttpCookie cookie;
+    if (Request.Cookies.AllKeys.Contains("chart"))
+    {
+        cookie = Request.Cookies["chart"];
+    }
+    else
+    {
+        cookie = new HttpCookie("chart");
+    }
+
+    int chartCount;
+    if (cookie.Value == null)
+    {
+        chartCount = 0;
+    }
+    else
+    {
+        chartCount = cookie.Value.Split(',').Length;
+    }
+
+    var selectedItemsIdArray = cookie.Value.Split(',');
 }
 
-<h2>Index</h2>
+<div class="page-header">
+    <h1>Chart <small>You selected @chartCount items</small></h1>
+</div>
+
+@foreach (var item in selectedItemsIdArray)
+{
+    
+      <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object" src="http://placehold.it/100x120" />
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">@Model.First(x => x.Id.ToString() == item).ProductName</h4>
+            <div class="pull-right">
+                @Html.ActionLink("Delete", "AddToChart", "Chart", new { Model.First(x => x.Id.ToString() == item).Id }, new { @class = "btn btn-danger btn-block" })
+
+                <p class="btn btn-default btn-lg btn-block">$ @Model.First(x => x.Id.ToString() == item).Price</p>
+            </div>
+        </div>
+    </div>      
+}
+
+@Html.ActionLink("Continue ordering", "OrderForm", "Chart", null, new { @class = "btn btn-primary btn-lg btn-block" })

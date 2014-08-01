@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "AdministratorControlPanel";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#" id="categories">Categories</a></li>
+            <li><a href="#" id="products">Products</a></li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <div id="contentContainer" style="background-color: white; padding: 20px; margin: 10px;">
+            @Html.Action("AdminCategories")
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    $(function () {
+        //http://api.jquery.com/jquery.ajax/
+        $('#products').click(function () {
+            $('.active').removeClass('active');
+            $(this).parent().addClass('active');
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                url: '@Url.Action("AdminProducts")'
+            }).done(function (result) {
+                $('#contentContainer').html(result);
+            });
+        });
+        $('#categories').click(function () {
+            $('.active').removeClass('active');
+            $(this).parent().addClass('active');
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                url: '@Url.Action("AdminCategories")'
+            }).done(function (result) {
+                $('#contentContainer').html(result);
+            });
+        });
+
+    })
+</script>

@@ -1,0 +1,41 @@
+﻿@model AmazingShop.Models.Customer
+@{
+    ViewBag.Title = "OrderForm";
+}
+
+<h2>OrderForm</h2>
+
+@using (Html.BeginForm("SaveOrder", "Chart", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+   
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Name" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", placeholder = "E-mail" })
+    </div>
+    
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", placeholder = "Phone" })
+    </div> 
+    
+    <div class="form-group">
+        <label for="City">Select Your country</label>
+        <select class="form-control" id="Country" name="Country">
+            <option value="Ukraine">Ukraine</option>
+            <option value="Poland">Poland</option>
+            <option value="Moldova">Moldova</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Slovak Republic">Slovak Republic</option>
+        </select>
+        @*@Html.DropDownListFor(x => x.Country, (List<SelectListItem>)Model.Countries, new { @class = "form-control" })*@
+    </div>
+    
+    <div class="form-group">
+        @Html.TextAreaFor(x => x.DeliveryAddress, new { @class = "form-control", placeholder = "Delivery Address" })
+    </div>
+
+   
+    <input type="submit" value="Order!" class="btn btn-primary" style="margin-top:10px" />
+}

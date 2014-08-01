@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AmazingShop.Models;
 
 namespace AmazingShop.Controllers
 {
@@ -13,7 +14,10 @@ namespace AmazingShop.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var entity = new ProductsDBEntities1();
+            var allProducts = entity.ProductLists.ToList();
+            return View(allProducts);
+      
         }
 
         public ActionResult AddToChart(int id)
@@ -33,6 +37,19 @@ namespace AmazingShop.Controllers
             cookie.Expires = DateTime.Now.AddDays(10);
             Response.Cookies.Add(cookie);
             return Redirect(Request.UrlReferrer.ToString());
+        }
+
+        public ActionResult OrderForm()
+        {    
+            return View(new Customer());
+
+        }
+
+        public ActionResult SaveOrder()
+        {
+            
+            return View();
+
         }
 
     }

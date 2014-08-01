@@ -140,6 +140,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>ProductsDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\ProductList.cs">
       <DependentUpon>ProductsDB.tt</DependentUpon>
@@ -289,6 +290,10 @@
     <Content Include="Views\Administration\Index.cshtml" />
     <Content Include="Views\Shared\AuthorisationFailed.cshtml" />
     <Content Include="Views\Administration\AdministratorControlPanel.cshtml" />
+    <Content Include="Views\Administration\AdminCategories.cshtml" />
+    <Content Include="Views\Administration\AdminProducts.cshtml" />
+    <Content Include="Views\Chart\OrderForm.cshtml" />
+    <Content Include="Views\Chart\SaveOrder.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

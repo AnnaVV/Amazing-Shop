@@ -1,0 +1,14 @@
+﻿@model IEnumerable<AmazingShop.Models.Category>
+@{
+    Layout = null;
+}
+
+<ul class="list-group">
+    @foreach(var item in Model)
+    { 
+    <li class="list-group-item"><span class="badge">@item.ProductLists.Count()</span>@item.CategoryName<span class="glyphicon glyphicon-trash pull-right" style="margin-right:10px"></span></li>
+    }
+</ul>
+
+@Html.ActionLink("Add new Category", "AddCategory", "Category", null, new { @class = "btn btn-primary btn-lg btn-block" })
+
