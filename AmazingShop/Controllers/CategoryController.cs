@@ -14,7 +14,9 @@ namespace AmazingShop.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var entity = new ProductsDBEntities1();
+            var categories = entity.Categories.ToList();
+            return View(categories);
         }
 
         public ActionResult AddCategory()
@@ -30,6 +32,17 @@ namespace AmazingShop.Controllers
             entity.Categories.Add(model);
             entity.SaveChanges();
             return RedirectToAction("AddCategory");
+        }
+
+        public ActionResult GetProductListByCategory(int id)
+        {
+            var entity = new ProductsDBEntities1();
+
+            var productListQuery = entity.ProductLists.Where(x => x.CategoryId == id).ToList();
+            var categoryName = entity.Categories.First(x => x.Id == id).CategoryName;
+
+            ViewBag.CategoryName = categoryName;
+            return View(productListQuery);
         }
 
     }

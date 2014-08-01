@@ -1,14 +1,17 @@
-﻿@{
-    ViewBag.Title = "Index";
-}
+﻿@model IEnumerable<AmazingShop.Models.Category>
+
 
 <div class="row">
-    <div class="col-xs-6 col-md-3">
+    @foreach(var item in Model)
+    {
+      <div class="col-xs-6 col-md-3">
         <div class="thumbnail">
-            <img src="http://placehold.it/171x180">
-            <h4 align="center">Wooden Accessories</h4>
-            <p align="center">Category description</p>
-            @Html.ActionLink("MORE", "CategoryProductList", "Category", null, new { @class = "btn btn-primary", @style = "margin-left:90px" })           
+            <img src="http://placehold.it/171x180"/>
+            <h4 align="center">@item.CategoryName</h4>
+            <p align="center">@item.CategoryDescription</p>
+            @Html.ActionLink("MORE", "GetProductListByCategory", "Category", new { item.Id }, new { @class = "btn btn-primary", @style = "margin-left:90px" })           
         </div>   
-    </div>
+      </div>  
+    }
+    
 </div>

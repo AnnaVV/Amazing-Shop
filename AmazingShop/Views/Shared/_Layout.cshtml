@@ -8,7 +8,27 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    
+    @{
+        HttpCookie cookie;
+        if (Request.Cookies.AllKeys.Contains("chart"))
+        {
+            cookie = Request.Cookies["chart"];
+        }
+        else
+        {
+            cookie = new HttpCookie("chart");
+        }
+
+        int chartCount;
+        if (cookie.Value == null)
+        {
+            chartCount = 0;
+        }
+        else 
+        { 
+            chartCount = cookie.Value.Split(',').Length;
+        }
+    }
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,9 +43,11 @@
                     <li>@Html.ActionLink("About", "Index", "About")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                <li><span class="glyphicon glyphicon-star" style="margin-top:15px; color:whitesmoke"></span></li>
+                <li>@Html.ActionLink("Administration", "Index", "Administration")</li>
                 <li><span class="glyphicon glyphicon-shopping-cart" style="margin-top:15px; color:aqua"></span></li>              
                 <li>@Html.ActionLink("Chart", "Index", "Chart")</li>
-                <li ><span class="badge" style="margin-top:15px">4</span></li>
+                <li ><span class="badge" style="margin-top:15px">@chartCount</span></li>
                 </ul>
 </div><!-- /.navbar-collapse -->
           

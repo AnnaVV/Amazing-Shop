@@ -129,15 +129,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Filters\AdminAuthorisationAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>ProductsDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\ProductList.cs">
       <DependentUpon>ProductsDB.tt</DependentUpon>
     </Compile>
@@ -282,6 +285,10 @@
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Category\AddCategory.cshtml" />
     <Content Include="Views\Product\AddProduct.cshtml" />
+    <Content Include="Views\Category\GetProductListByCategory.cshtml" />
+    <Content Include="Views\Administration\Index.cshtml" />
+    <Content Include="Views\Shared\AuthorisationFailed.cshtml" />
+    <Content Include="Views\Administration\AdministratorControlPanel.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
