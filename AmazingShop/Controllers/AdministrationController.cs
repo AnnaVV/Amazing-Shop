@@ -8,7 +8,7 @@ using AmazingShop.Filters;
 
 namespace AmazingShop.Controllers
 {
-    [AdminAuthorisation]
+    
     public class AdministrationController : Controller
     {
         //
@@ -19,6 +19,7 @@ namespace AmazingShop.Controllers
             return View(new Login());
         }
 
+        
         [HttpPost]
         public ActionResult LogIn(Login model)
         {
@@ -36,11 +37,13 @@ namespace AmazingShop.Controllers
             }
         }
 
+        [AdminAuthorisation]
         public ActionResult AdministratorControlPanel()
         {
             return View();
         }
 
+        [AdminAuthorisation]
         public ActionResult AdminCategories()
         {
             var entity = new ProductsDBEntities1();
@@ -48,6 +51,7 @@ namespace AmazingShop.Controllers
             return View(allCategories);
         }
 
+        [AdminAuthorisation]
         public ActionResult AdminProducts()
         {
             var entity = new ProductsDBEntities1();

@@ -30,3 +30,34 @@ J:\Documents\Visual Studio 2013\Projects\AmazingShop\AmazingShop\bin\System.Web.
 J:\Documents\Visual Studio 2013\Projects\AmazingShop\AmazingShop\obj\Debug\AmazingShop.csprojResolveAssemblyReference.cache
 J:\Documents\Visual Studio 2013\Projects\AmazingShop\AmazingShop\obj\Debug\AmazingShop.dll
 J:\Documents\Visual Studio 2013\Projects\AmazingShop\AmazingShop\obj\Debug\AmazingShop.pdb
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\AmazingShop.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\AmazingShop.pdb
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\Antlr3.Runtime.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\EntityFramework.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\Newtonsoft.Json.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Net.Http.Formatting.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Http.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Http.WebHost.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Mvc.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Optimization.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Providers.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Razor.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.WebPages.Deployment.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.WebPages.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.WebPages.Razor.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\WebGrease.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\EntityFramework.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\Newtonsoft.Json.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Net.Http.Formatting.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Http.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Http.WebHost.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Mvc.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.Razor.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.WebPages.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.WebPages.Deployment.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\bin\System.Web.WebPages.Razor.xml
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\obj\Debug\AmazingShop.csprojResolveAssemblyReference.cache
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\obj\Debug\AmazingShop.dll
+D:\Softheme_Internship\Amazing-Shop-master\AmazingShop\obj\Debug\AmazingShop.pdb

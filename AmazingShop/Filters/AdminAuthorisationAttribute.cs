@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AmazingShop.Filters
 {
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
     public class AdminAuthorisationAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
